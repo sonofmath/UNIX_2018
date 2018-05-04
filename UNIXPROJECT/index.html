@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+  <title>Contact Form Example</title>
+</head>
+
+<body>
+  <h2 class="content-head is-center">Run Pump!!</h2>
+  <aside>
+       <p>
+           Sensor has detected a low water level! 
+           Click the button below to turn on the water pump.
+       </p>
+   </aside>
+
+<!-- START HERE -->
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- Style The Contact Form How Ever You Prefer -->
+   <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/style.css">
+
+  <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbyVLdJDEYpK5_MDFbApBBkJxrgQn5-L2xXE4ZRkbEH_of8yzA/exec">
+    <!-- change the form action to your script url -->
+
+    <button  class="button-success pure-button button-xlarge">
+      <i class="fa fa-paper-plane"></i>&nbsp;Run Pump</button>
+
+  </form>
+
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Confirmed</em>!
+      Your Pump Is Running!</h2>
+  </div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+  <!-- <script data-cfasync="false" type="text/javascript"
+  src="/form-submission-handler.js"></script> -->
+<!-- END -->
+
+</body>
+</html>
